@@ -1,17 +1,81 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lumi Translate</title>
+
   <link rel="manifest" href="/lumi-translate/manifest.json">
-<meta name="theme-color" content="#7c3aed">
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/lumi-translate/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lumi Translate</title>
-    <script type="module" crossorigin src="/lumi-translate/assets/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/lumi-translate/assets/index.css">
-  </head>
+  <meta name="theme-color" content="#7c3aed">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #7c3aed, #3b82f6);
+      color: white;
+      font-weight: bold;
+    }
+
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
 <body>
+  <div class="card">
+    <h1>Lumi Translate</h1>
 
-<div id="root"></div>
+    <textarea id="input" placeholder="Digite algo..."></textarea>
 
+    <button onclick="traduzir()">Traduzir</button>
+
+    <div class="result" id="output"></div>
+  </div>
+
+  <script>
+    function traduzir() {
+      const texto = document.getElementById('input').value;
+      document.getElementById('output').innerText =
+        "Tradução: " + texto;
+    }
+  </script>
 </body>
 </html>
