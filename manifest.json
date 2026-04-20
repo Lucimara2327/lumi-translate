@@ -1,8 +1,7 @@
 {
   "name": "Lumi Translate",
   "short_name": "Lumi",
-"start_url": "/lumi-translate/",
-"scope": "/lumi-translate/"
+"start_url": "/"
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#7B3FE4",
